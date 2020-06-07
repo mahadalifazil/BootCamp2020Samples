@@ -22,7 +22,3 @@ jobs:
     
     - name: deploying using surge
       run: surge ./ mahad-bootcamp2020.surge.sh/ --token $ {{ secrets.SURGE_TOKEN }}
-  
-        docker run \
-        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-        jekyll/builder:latest /bin/bash -c "chmod 777 /srv/jekyll && jekyll build --future"
